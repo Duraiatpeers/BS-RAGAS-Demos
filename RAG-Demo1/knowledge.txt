@@ -1,0 +1,7 @@
+Azure OpenAI Service provides REST API access to OpenAI's powerful language models including GPT-4, GPT-3.5-Turbo, and Embeddings model series. These models can be easily adapted to specific tasks including content generation, summarization, semantic search, and natural language to code translation.
+
+Retrieval-Augmented Generation (RAG) is a technique that combines information retrieval with text generation. Instead of relying only on what a language model learned during training, RAG first retrieves relevant pieces of text from an external knowledge source, then feeds that text to the model as context so it can generate a grounded, up-to-date answer.
+
+A typical RAG pipeline has three steps. First, the knowledge source is split into small chunks of text. Second, each chunk is converted into a numeric vector using an embedding model, and the same is done for the user's question. Third, the chunks whose vectors are most similar to the question's vector are selected and passed to a chat model along with the question, so the model can answer using that retrieved context.
+
+Cosine similarity is a common way to measure how close two embedding vectors are. A score close to 1 means the texts are very similar in meaning, while a score close to 0 means they are unrelated.

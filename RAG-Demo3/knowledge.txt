@@ -1,0 +1,7 @@
+Retrieval-Augmented Generation (RAG) is a technique that combines information retrieval with text generation. Instead of relying only on what a language model learned during training, RAG first retrieves relevant pieces of text from an external knowledge source, then feeds that text to the model as context so it can generate a grounded, up-to-date answer.
+
+A typical RAG pipeline has three steps. First, the knowledge source is split into small chunks of text. Second, each chunk is converted into a numeric vector using an embedding model, and the same is done for the user's question. Third, the chunks whose vectors are most similar to the question's vector are selected and passed to a chat model along with the question, so the model can answer using that retrieved context.
+
+RAG systems can be evaluated with metrics that check different parts of the pipeline. Faithfulness checks whether the generated answer is actually supported by the retrieved context, rather than containing claims the model made up. Answer relevancy checks whether the generated answer actually addresses the question that was asked. Context precision checks whether the retrieved context is relevant to the question. Context recall checks whether the retrieved context contains the information that was actually needed to produce a correct answer.
+
+Cosine similarity is a common way to measure how close two embedding vectors are. A score close to 1 means the texts are very similar in meaning, while a score close to 0 means they are unrelated.
