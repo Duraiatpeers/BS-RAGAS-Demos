@@ -7,7 +7,7 @@ Needs these environment variables:
     AZURE_OPENAI_API_KEY
     AZURE_OPENAI_EMBEDDING_DEPLOYMENT  name of your embeddings deployment
     AZURE_OPENAI_CHAT_DEPLOYMENT       name of your chat deployment
-
+    AZURE_OPENAI_JUDGE_DEPLOYMENT      name of judge model
 Run:
     python rag.py "What is RAG?"
 """

@@ -1,23 +1,3 @@
-"""
-Pytest tests for two more RAGAS-style metrics (see metrics.py): noise
-sensitivity and summarization score. Run against the real rag.py
-pipeline and a real Azure OpenAI deployment. No mocking.
-
-For each metric there are two tests: one where the pipeline should
-genuinely score well, and one with a deliberately bad input where the
-score should come out low - the second kind checks the judge is
-actually discriminating, not just agreeing with everything.
-
-Needs a working .env with:
-    AZURE_OPENAI_ENDPOINT
-    AZURE_OPENAI_API_KEY
-    AZURE_OPENAI_EMBEDDING_DEPLOYMENT
-    AZURE_OPENAI_CHAT_DEPLOYMENT
-    AZURE_OPENAI_JUDGE_DEPLOYMENT      optional - defaults to the chat deployment
-
-Run:
-    pytest test_metrics.py -v -s
-"""
 
 import os
 
